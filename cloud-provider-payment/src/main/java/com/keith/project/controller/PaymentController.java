@@ -22,7 +22,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/create")
-    public ServerResponse<Integer> create(Payment payment) {
+    public ServerResponse<Integer> create(@RequestBody Payment payment) {
         return paymentService.insertPayment(payment);
     }
 
