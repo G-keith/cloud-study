@@ -3,7 +3,7 @@
 <mapper namespace="com.keith.project.dao.PaymentMapper">
 
     <select id="getPaymentById" resultType="com.keith.project.entity.Payment">
-        select id,serial from payment
+        select id,serial from payment where id=#{id}
     </select>
 
     <insert id="insertPayment">
