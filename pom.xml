@@ -13,6 +13,7 @@
         <module>cloud-provider-order</module>
         <module>cloud-api-commons</module>
         <module>cloud-eureka-server</module>
+        <module>cloud-eureka-server2</module>
     </modules>
 
     <!--统一管理jar版本-->
