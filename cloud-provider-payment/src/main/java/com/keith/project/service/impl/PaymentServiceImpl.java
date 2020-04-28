@@ -2,9 +2,8 @@ package com.keith.project.service.impl;
 
 import com.keith.common.statuscode.ServerResponse;
 import com.keith.project.dao.PaymentMapper;
-import com.keith.project.entity.Payment;
 import com.keith.project.service.PaymentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.keith.project.entity.Payment;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

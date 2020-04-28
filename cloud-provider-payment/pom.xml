@@ -12,6 +12,12 @@
     <artifactId>cloud-provider-payment</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.keith.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
