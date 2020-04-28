@@ -34,7 +34,7 @@ public class PaymentServiceImpl implements PaymentService {
         if(result>0){
             return ServerResponse.createBySuccess("port："+port);
         }else{
-            return ServerResponse.createBySuccessMessage("port："+port);
+            return ServerResponse.createByErrorMessage("port："+port);
         }
     }
 }
