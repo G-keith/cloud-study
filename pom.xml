@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cloud-provider-payment</module>
+        <module>cloud-provider-order</module>
     </modules>
 
     <!--统一管理jar版本-->
