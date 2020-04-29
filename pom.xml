@@ -18,6 +18,8 @@
         <module>cloud-provider-payment-z</module>
         <module>cloud-consumer-order-zk</module>
         <module>cloud-provider-order-zk</module>
+        <module>cloud-provider-payment-consul</module>
+        <module>cloud-provider-order-consul</module>
     </modules>
 
     <!--统一管理jar版本-->
