@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 自定义Rule规则
+ * 自定义Rule规则,启动类加上RibbonClient注解
  * @author keith
  * @version 1.0
  * @date 2020-04-29

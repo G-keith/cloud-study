@@ -1,6 +1,5 @@
 package com.keith.common.lb;
 
-import com.keith.common.lb.LoadBalancer;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 自定义Rule规则
+ * 自定义Rule规则 去掉Application  LoadBalanced注解
  * @author keith
  * @version 1.0
  * @date 2020-04-29
