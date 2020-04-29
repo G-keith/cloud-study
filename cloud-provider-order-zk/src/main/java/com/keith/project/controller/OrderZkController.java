@@ -18,14 +18,14 @@ import javax.annotation.Resource;
 @RequestMapping(value = "/order")
 public class OrderZkController {
 
-    public static final String PAYMENT_URL = "http://cloud-provider-payment";
+    public static final String INVOME_URL = "http://cloud-provider-payment";
 
     @Resource
     private RestTemplate restTemplate;
 
     @GetMapping("/zk")
     public String payment (){
-        return restTemplate.getForObject(PAYMENT_URL+"/payment/zk",String.class);
+        return restTemplate.getForObject(INVOME_URL+"/payment/zk",String.class);
     }
 
 
