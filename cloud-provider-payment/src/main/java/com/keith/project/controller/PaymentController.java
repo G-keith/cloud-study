@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author keith
@@ -29,5 +30,16 @@ public class PaymentController {
     @GetMapping(value = "/get/{id}")
     public ServerResponse<Payment> getPaymentById(@PathVariable("id") Long id) {
         return paymentService.getPaymentById(id);
+    }
+
+    @GetMapping(value = "/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "8001";
+
     }
 }
