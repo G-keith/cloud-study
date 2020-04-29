@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-server1:7001/eureka,http://eureka-server2:7002/eureka  #集群配置
+ribbon:
+  ReadTimeout:  5000  #建立连接时间
+  ConnectTimeout: 5000  #读取资源时间
+
+logging:
+  level:
+    com.keith.project: debug
