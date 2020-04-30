@@ -14,6 +14,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class OrderApplicationZk {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplicationZk.class);
+        SpringApplication.run(OrderApplicationZk.class,args);
     }
 }

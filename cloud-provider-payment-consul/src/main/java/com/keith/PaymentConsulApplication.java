@@ -14,6 +14,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class PaymentConsulApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PaymentConsulApplication.class);
+        SpringApplication.run(PaymentConsulApplication.class,args);
     }
 }
