@@ -1,6 +1,8 @@
 package com.keith.project.controller;
 
 import com.keith.project.service.PaymentHystrixService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +30,18 @@ public class OrderHystrixController {
     }
 
     @GetMapping("/hystrix/timeout/{id}")
+    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")
+    })
     public String paymentInfoTimeOut(@PathVariable("id") Integer id) {
         return paymentHystrixService.paymentInfoTimeOut(id);
+    }
+
+    /**
+     * 兜底方法
+     * @return 错误信息
+     */
+    public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id){
+        return "我是消费者80，对付支付系统繁忙请10秒钟后再试或者自己运行出错请检查自己,(┬＿┬)";
     }
 }

@@ -1,7 +1,6 @@
 package com.keith.project.controller;
 
 import com.keith.common.statuscode.ServerResponse;
-import com.keith.project.entity.Payment;
 import com.keith.project.service.PaymentFeignService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
