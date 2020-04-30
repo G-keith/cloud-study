@@ -14,6 +14,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class OrderConsulApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderConsulApplication.class);
+        SpringApplication.run(OrderConsulApplication.class,args);
     }
 }
