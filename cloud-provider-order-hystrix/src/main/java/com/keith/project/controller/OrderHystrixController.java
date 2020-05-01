@@ -34,21 +34,4 @@ public class OrderHystrixController {
     public String paymentInfoTimeOut(@PathVariable("id") Integer id) {
         return paymentHystrixService.paymentInfoTimeOut(id);
     }
-
-    /**
-     * 兜底方法
-     * @return 错误信息
-     */
-    public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id){
-        return "我是消费者80，对付支付系统繁忙请10秒钟后再试或者自己运行出错请检查自己,(┬＿┬)";
-    }
-
-    /**
-     * 下面是全局fallback方法
-     * @return  全局fallback
-     */
-    public String paymentGlobalFallbackMethod(){
-        return "Global异常处理信息，请稍后再试,(┬＿┬)";
-    }
-
 }

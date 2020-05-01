@@ -22,6 +22,7 @@
         <module>cloud-provider-order-feign</module>
         <module>cloud-provider-payment-hystrix</module>
         <module>cloud-provider-order-hystrix</module>
+        <module>cloud-hystrix-dashboard-server</module>
     </modules>
 
     <!--统一管理jar版本-->
