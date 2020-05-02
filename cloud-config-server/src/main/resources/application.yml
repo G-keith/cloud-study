@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri:  git@github.com:G-keith/cloud-study-config.git
+          uri:  https://github.com/G-keith/cloud-study-config.git
           search-paths:
             - cloud-study-config
       label: master
