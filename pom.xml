@@ -24,6 +24,7 @@
         <module>cloud-provider-order-hystrix</module>
         <module>cloud-hystrix-dashboard-server</module>
         <module>cloud-gateway-server</module>
+        <module>cloud-config-server</module>
     </modules>
 
     <!--统一管理jar版本-->

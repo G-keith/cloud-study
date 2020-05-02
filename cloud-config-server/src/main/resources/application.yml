@@ -1,0 +1,18 @@
+server:
+  port: 7020
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  git@github.com:G-keith/cloud-study-config.git
+          search-paths:
+            - cloud-study-config
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://eureka-server1:7001/eureka,http://eureka-server2:7002/eureka  #集群配置
+
