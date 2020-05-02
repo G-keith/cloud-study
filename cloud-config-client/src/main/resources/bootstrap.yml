@@ -1,0 +1,17 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:7020
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:7001/eureka,http://eureka-server2:7002/eureka  #集群配置
+
