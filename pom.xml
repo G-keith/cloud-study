@@ -26,6 +26,7 @@
         <module>cloud-gateway-server</module>
         <module>cloud-config-server</module>
         <module>cloud-config-client</module>
+        <module>cloud-config-client2</module>
     </modules>
 
     <!--统一管理jar版本-->

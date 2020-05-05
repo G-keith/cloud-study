@@ -11,8 +11,17 @@ spring:
           search-paths:
             - cloud-study-config
       label: master
+  rabbitmq:
+    host:
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
       defaultZone:  http://eureka-server1:7001/eureka,http://eureka-server2:7002/eureka  #集群配置
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

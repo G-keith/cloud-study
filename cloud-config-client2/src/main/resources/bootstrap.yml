@@ -13,6 +13,11 @@ spring:
       discovery:
         enabled: true   #开启Config服务发现支持
         service-id: cloud-config-center    #指定server端的name
+  rabbitmq:
+    host:
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
