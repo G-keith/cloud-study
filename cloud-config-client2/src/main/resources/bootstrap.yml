@@ -1,31 +1,4 @@
-server:
-  port: 8021
-
 spring:
-  application:
-    name: config-client
-  cloud:
-    config:
-      label: master
-      name: config
-      profile: dev
-      uri: http://localhost:7020
-      discovery:
-        enabled: true   #开启Config服务发现支持
-        service-id: cloud-config-center    #指定server端的name
-  rabbitmq:
-    host:
-    port: 5672
-    username: guest
-    password: guest
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server1:7001/eureka,http://eureka-server2:7002/eureka  #集群配置
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+  profiles:
+    active: dev
 
