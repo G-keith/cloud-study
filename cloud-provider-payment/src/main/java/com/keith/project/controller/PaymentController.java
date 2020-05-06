@@ -40,6 +40,12 @@ public class PaymentController {
             e.printStackTrace();
         }
         return "8001";
-
     }
+
+    @GetMapping("/zipkin")
+    public String paymentZipkin()
+    {
+        return "hi ,i'am payment zipkin server fall back，welcome to atguigu，O(∩_∩)O哈哈~";
+    }
+
 }
