@@ -30,6 +30,7 @@
         <module>cloud-stream-rabbitmq-provider</module>
         <module>cloud-stream-rabbitmq-consumer</module>
         <module>cloud-stream-rabbitmq-consumer2</module>
+        <module>cloud-stream-rabbitmq-provider2</module>
     </modules>
 
     <!--统一管理jar版本-->
