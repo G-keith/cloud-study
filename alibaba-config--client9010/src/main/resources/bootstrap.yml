@@ -1,0 +1,16 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #服务注册中心地址
+      config:
+        server-addr: localhost:8848 #配置中心地址
+        file-extension: yaml #指定yaml格式的配置
+        namespace: 6c6b8b93-c11d-424c-955f-8243abc059e1
+        group: DEV_GROUP
+
+#${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}

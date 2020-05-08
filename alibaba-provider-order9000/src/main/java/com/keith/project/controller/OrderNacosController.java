@@ -18,8 +18,7 @@ import javax.annotation.Resource;
 @Slf4j
 @RestController
 @RequestMapping(value = "/order")
-public class OrderNacosController
-{
+public class OrderNacosController {
     @Resource
     private RestTemplate restTemplate;
 
@@ -27,9 +26,8 @@ public class OrderNacosController
     private String serverUrl;
 
     @GetMapping(value = "/nacos/{id}")
-    public String paymentInfo(@PathVariable("id") Long id)
-    {
-        return restTemplate.getForObject(serverUrl +"/payment/nacos/"+id,String.class);
+    public String paymentInfo(@PathVariable("id") Long id) {
+        return restTemplate.getForObject(serverUrl + "/payment/nacos/" + id, String.class);
     }
 
 }
