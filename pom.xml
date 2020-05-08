@@ -33,6 +33,7 @@
         <module>cloud-stream-rabbitmq-provider2</module>
         <module>alibaba-provider-payment9001</module>
         <module>alibaba-provider-payment9002</module>
+        <module>alibaba-provider-order9000</module>
     </modules>
 
     <!--统一管理jar版本-->
