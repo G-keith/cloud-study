@@ -18,6 +18,10 @@ management:
     web:
       exposure:
         include: '*'
+#对Feign的支持
+feign:
+  sentinel:
+    enabled: true
 
 service-url:
   nacos-user-service: http://nacos-payment-provider

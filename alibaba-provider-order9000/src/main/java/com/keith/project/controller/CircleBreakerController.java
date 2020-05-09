@@ -4,7 +4,9 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.keith.common.statuscode.ServerResponse;
 import com.keith.project.entity.Payment;
+import com.keith.project.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,17 +19,19 @@ import javax.annotation.Resource;
  * @version 1.0
  * @date 2020-05-09
  **/
-@RestController
 @Slf4j
+@RestController
+@RequestMapping(value = "/consumer")
 public class CircleBreakerController {
 
     public static final String SERVICE_URL = "http://nacos-payment-provider";
     @Resource
     private RestTemplate restTemplate;
+    @Resource
+    private PaymentService paymentService;
 
 
-
-    @RequestMapping("/consumer/fallback/{id}")
+    @RequestMapping("/fallback/{id}")
     //@SentinelResource(value = "fallback") //没有配置
     //@SentinelResource(value = "fallback",fallback = "handlerFallback") //fallback只负责业务异常
     //@SentinelResource(value = "fallback",blockHandler = "blockHandler") //blockHandler只负责sentinel控制台配置违规
@@ -46,6 +50,14 @@ public class CircleBreakerController {
 
         return result;
     }
+
+
+    @GetMapping(value = "/paymentSQL/{id}")
+    public String  getPayment(@PathVariable("id") Long id) {
+        return paymentService.getPayment(id);
+    }
+
+
 
     /**
      * fallback异常
