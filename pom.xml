@@ -36,6 +36,9 @@
         <module>alibaba-provider-order9000</module>
         <module>alibaba-config--client9010</module>
         <module>alibaba-sentinel-service9020</module>
+        <module>alibaba-seata-order-service9031</module>
+        <module>alibaba-seata-order-service9032</module>
+        <module>alibaba-seata-order-service9033</module>
     </modules>
 
     <!--统一管理jar版本-->
